@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --proxy-config src/proxy.conf.json",
-    "build": "ng build",
+    "build-dev": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "compodoc:build": "compodoc -p tsconfig.doc.json",
@@ -13,7 +13,9 @@
     "dev:ssr": "ng run Mark-One:serve-ssr",
     "serve:ssr": "node dist/Mark-One/server/main.js",
     "build:ssr": "ng build && ng run Mark-One:server",
-    "prerender": "ng run Mark-One:prerender"
+    "prerender": "ng run Mark-One:prerender",
+    "vercel-build": "npm run build:ssr"
+
   },
   "private": true,
   "dependencies": {
