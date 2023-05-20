@@ -1,5 +1,5 @@
 {
-  "name": "angular-personal-boilerplate",
+  "name": "mark-one",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -9,7 +9,11 @@
     "test": "ng test",
     "compodoc:build": "compodoc -p tsconfig.doc.json",
     "compodoc:build-and-serve": "compodoc -p tsconfig.doc.json -s",
-    "compodoc:serve": "compodoc -s"
+    "compodoc:serve": "compodoc -s",
+    "dev:ssr": "ng run Mark-One:serve-ssr",
+    "serve:ssr": "node dist/Mark-One/server/main.js",
+    "build:ssr": "ng build && ng run Mark-One:server",
+    "prerender": "ng run Mark-One:prerender"
   },
   "private": true,
   "dependencies": {
@@ -20,10 +24,14 @@
     "@angular/forms": "^15.2.7",
     "@angular/platform-browser": "^15.2.7",
     "@angular/platform-browser-dynamic": "^15.2.7",
+    "@angular/platform-server": "^15.2.7",
     "@angular/router": "^15.2.7",
     "@angular/service-worker": "^15.2.7",
     "@compodoc/compodoc": "^1.1.19",
+    "@nguniversal/express-engine": "^15.2.1",
+    "aos": "^2.3.4",
     "codelyzer": "^6.0.0",
+    "express": "^4.15.2",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
@@ -32,7 +40,11 @@
     "@angular-devkit/build-angular": "^15.2.6",
     "@angular/cli": "~15.2.6",
     "@angular/compiler-cli": "^15.2.7",
+    "@nguniversal/builders": "^15.2.1",
+    "@types/aos": "^3.0.4",
+    "@types/express": "^4.17.0",
     "@types/jasmine": "~4.3.0",
+    "@types/node": "^14.15.0",
     "autoprefixer": "^10.4.14",
     "jasmine-core": "~4.5.0",
     "karma": "~6.4.0",

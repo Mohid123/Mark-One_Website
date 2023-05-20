@@ -11,7 +11,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     AppComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     CoreModule,
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', {

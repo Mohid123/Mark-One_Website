@@ -1,8 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const primaryColors = {
-  light: '#93C5FD',
-  DEFAULT: '#0081E9',
-  dark: '#0081E9',
+  DEFAULT: '#dca827'
 };
 
 const extendedSize = {
@@ -78,15 +76,9 @@ module.exports = {
         '3xl': '1920px',
       },
       colors: {
-        'primary-light': '#E2F1FC',
-        'primary-50': '#C4E3FC',
-        'primary-100': '#93C5FD',
-        'primary-400': '#0081E9',
-        'primary-500': '#0081E9',
+        'primary': '#dca827',
         'custom-black' : {
-          '100': '#4e5970b3',
-          '600': '#4E5970',
-          '900': '#191919',
+          'primary': '#231f20'
         },
         'font-gray' : {
           '600': '#9399B2',
@@ -131,8 +123,9 @@ module.exports = {
       }
     },
     fontFamily: {
-      display: ['roboto', 'sans-serif'],
-      body: ['roboto', 'sans-serif'],
+      sans: ['"Rajdhani"', 'sans-serif'],
+      display: ['Rajdhani', 'sans-serif'],
+      body: ['Rajdhani', 'sans-serif'],
     },
     container: {
       center: true,
