@@ -1,9 +1,9 @@
 <app-header></app-header>
 
-<section class="w-11/12 block mx-auto p-5">
+<section id="home" class="w-11/12 block mx-auto p-5">
   <section class="w-full py-10 mt-20 border-b border-primary">
     <div class="flex justify-center gap-x-40">
-      <img data-aos="fade-down" class="rounded-lg sm:block hidden" ngSrc="../../../assets/building.webp" alt="aprtment_building" width="300" height="400">
+      <img data-aos="fade-down" class="rounded-lg sm:block hidden" ngSrc="../../../assets/building.webp" alt="aprtment_building" width="300" height="400" loading="eager">
       <div data-aos="fade-up" class="flex flex-col gap-y-5">
         <p class="font-semibold text-primary">Project Overview</p>
         <h1 class="text-5xl font-semibold tracking-wider text-primary">
@@ -39,7 +39,7 @@
       </div>
       <div class="flex flex-col items-center justify-center px-8 py-8  w-full sm:w-[11.2rem] h-44 bg-slate-100 rounded-tr-3xl text-primary hover:bg-primary hover:text-white">
         <img ngSrc="../../../assets/security-camera.svg" alt="road" width="50" height="50">
-        <p class="font-bold text-center">24/7 Security</p>
+        <p id="commercial" class="font-bold text-center">24/7 Security</p>
       </div>
     </div>
   </section>
@@ -144,6 +144,7 @@
       </app-estate-card>
 
       <app-estate-card
+        id="corporate"
         [designation]="'LG-04'"
         [area]="'494.00'"
         [price]="'1,20,000'"
@@ -153,12 +154,15 @@
     </div>
   </section>
 
-  <section class="flex flex-col w-full py-10 border-b border-primary">
-    <h1 data-aos-duration="800" data-aos="fade-up" class="text-5xl font-semibold tracking-wider text-center text-primary">
+  <section data-aos-duration="800" data-aos="fade-up" class="flex flex-col w-full py-10 border-b border-primary">
+    <h1 class="text-5xl font-semibold tracking-wider text-center text-primary">
       Corporate Offices
     </h1>
-    <div class="h-50"></div>
-    <div class="h-50"></div>
+    <mat-tab-group class="mt-12" mat-stretch-tabs="true" mat-align-tabs="start">
+      <mat-tab label="First">Content 1</mat-tab>
+      <mat-tab label="Second">Content 2</mat-tab>
+      <mat-tab label="Third">Content 3</mat-tab>
+    </mat-tab-group>
 
   </section>
 </section>

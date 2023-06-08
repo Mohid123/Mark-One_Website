@@ -1,0 +1,15 @@
+.mat-mdc-tab.mdc-tab {
+  font-weight: 800!important;
+}
+
+.mat-mdc-tab .mdc-tab__text-label {
+  display: inline-flex;
+  align-items: center;
+  color: #DCA828!important;
+}
+
+.mdc-tab-indicator .mdc-tab-indicator__content {
+  color: #DCA828!important;
+  transition: 250ms transform cubic-bezier(0.4, 0, 0.2, 1);
+  border-color: #DCA828!important;
+}

@@ -15,15 +15,16 @@
     "build:ssr": "ng build && ng run Mark-One:server",
     "prerender": "ng run Mark-One:prerender",
     "vercel-build": "npm run build:ssr"
-
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "^15.2.7",
+    "@angular/cdk": "^15.2.9",
     "@angular/common": "^15.2.7",
     "@angular/compiler": "^15.2.7",
     "@angular/core": "^15.2.7",
     "@angular/forms": "^15.2.7",
+    "@angular/material": "^15.2.9",
     "@angular/platform-browser": "^15.2.7",
     "@angular/platform-browser-dynamic": "^15.2.7",
     "@angular/platform-server": "^15.2.7",

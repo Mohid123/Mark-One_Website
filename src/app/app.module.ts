@@ -5,6 +5,7 @@ import { CoreModule } from 'src/@core/core.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     CoreModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: !isDevMode(),
