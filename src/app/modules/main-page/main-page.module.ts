@@ -6,6 +6,7 @@ import { MainPageComponent } from './main-page.component';
 import { HeaderComponent } from 'src/app/components/header/header.component';
 import { EstateCardComponent } from 'src/app/components/estate-card/estate-card.component';
 import {MatTabsModule} from '@angular/material/tabs';
+import { FooterComponent } from 'src/app/components/footer/footer.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import {MatTabsModule} from '@angular/material/tabs';
     HeaderComponent,
     NgOptimizedImage,
     EstateCardComponent,
-    MatTabsModule
+    MatTabsModule,
+    FooterComponent
   ]
 })
 export class MainPageModule { }

@@ -1,5 +1,5 @@
-<div class="px-4 py-5 transition duration-300 ease-in-out rounded-xl w-80 bg-zinc-100 hover:shadow-lg hover:scale-105">
-  <p class="pb-2 font-bold border-b border-slate-500 text-custom-black-primary">Designation:&nbsp; <span class="text-primary">{{designation}}</span></p>
+<div class="px-4 py-5 overflow-hidden transition duration-300 ease-in-out rounded-xl w-80 bg-zinc-100 hover:shadow-lg hover:scale-105">
+  <p class="pb-2 font-bold border-b border-slate-500 text-custom-black-primary">{{designation ? 'Designation' : officeNumber ? 'Office Number' : 'Apartment Number'}}:&nbsp; <span class="text-primary">{{designation ? designation : officeNumber ? officeNumber: apartmentNumber}}</span></p>
   <p class="pb-2 mt-3 font-bold text-custom-black-primary">Total Area (per sq. ft.):&nbsp; <span class="text-primary">{{area}}</span></p>
   <p class="pb-2 mt-3 font-bold text-custom-black-primary">Price (per sq. ft.):&nbsp; <span class="text-primary">RS. {{price}}</span></p>
   <p class="pb-2 mt-3 font-bold text-custom-black-primary">Total Price:&nbsp; <span class="text-primary">RS. {{totalPrice}}</span></p>

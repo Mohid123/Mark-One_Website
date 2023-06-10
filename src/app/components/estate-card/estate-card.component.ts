@@ -10,8 +10,10 @@ import { CommonModule } from '@angular/common';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class EstateCardComponent {
-  @Input() designation!: string;
-  @Input() area!: string;
-  @Input() price!: string;
-  @Input() totalPrice!: string;
+  @Input() designation!: string | undefined;
+  @Input() officeNumber!: string | undefined;
+  @Input() apartmentNumber!: string | undefined;
+  @Input() area!: string | undefined;
+  @Input() price!: string | undefined;
+  @Input() totalPrice!: string | undefined;
 }

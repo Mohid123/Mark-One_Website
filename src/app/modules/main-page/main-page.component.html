@@ -1,9 +1,9 @@
 <app-header></app-header>
 
-<section id="home" class="w-11/12 block mx-auto p-5">
+<section id="home" class="block w-11/12 p-5 mx-auto">
   <section class="w-full py-10 mt-20 border-b border-primary">
     <div class="flex justify-center gap-x-40">
-      <img data-aos="fade-down" class="rounded-lg sm:block hidden" ngSrc="../../../assets/building.webp" alt="aprtment_building" width="300" height="400" priority>
+      <img data-aos="fade-down" class="hidden rounded-lg sm:block" ngSrc="../../../assets/building.webp" alt="aprtment_building" width="300" height="400" priority>
       <div data-aos="fade-up" class="flex flex-col gap-y-5">
         <p class="font-semibold text-primary">Project Overview</p>
         <h1 class="text-5xl font-semibold tracking-wider text-primary">
@@ -15,7 +15,7 @@
           sure to fulfill all your needs.
           A truly unique and all-in-one experience.
         </p>
-        <div class="mt-4 font-semibold tracking-wider text-xl text-primary inline-flex max-w-128">
+        <div class="inline-flex mt-4 text-xl font-semibold tracking-wider text-primary max-w-128">
           <img ngSrc="../../../assets/Oriental-Developers-Logo.webp" alt="oriental_estate" width="200" height="200">
         </div>
       </div>
@@ -144,7 +144,6 @@
       </app-estate-card>
 
       <app-estate-card
-        id="corporate"
         [designation]="'LG-04'"
         [area]="'494.00'"
         [price]="'1,20,000'"
@@ -152,6 +151,7 @@
       >
       </app-estate-card>
     </div>
+    <span id="corporate"></span>
   </section>
 
   <section data-aos-duration="800" data-aos="fade-up" class="flex flex-col w-full py-10 border-b border-primary">
@@ -159,10 +159,127 @@
       Corporate Offices
     </h1>
     <mat-tab-group class="mt-12" mat-stretch-tabs="true" mat-align-tabs="start">
-      <mat-tab label="First">Content 1</mat-tab>
-      <mat-tab label="Second">Content 2</mat-tab>
-      <mat-tab label="Third">Content 3</mat-tab>
-    </mat-tab-group>
+      <mat-tab label="First Floor">
+        <div class="flex flex-wrap justify-start py-12 overflow-hidden gap-x-0 sm:gap-x-4 gap-y-3">
+          <app-estate-card
+            [officeNumber]="'101'"
+            [area]="'640.00'"
+            [price]="'80,000'"
+            [totalPrice]="'51,200,000'"
+          >
+          </app-estate-card>
 
+          <app-estate-card
+            [officeNumber]="'102'"
+            [area]="'367.00'"
+            [price]="'80,000'"
+            [totalPrice]="'29,360,000'"
+          >
+          </app-estate-card>
+
+          <app-estate-card
+            [officeNumber]="'103'"
+            [area]="'718.00'"
+            [price]="'80,000'"
+            [totalPrice]="'57,440,000'"
+          >
+          </app-estate-card>
+
+          <app-estate-card
+            [officeNumber]="'104'"
+            [area]="'411.00'"
+            [price]="'80,000'"
+            [totalPrice]="'32,880,000'"
+          >
+          </app-estate-card>
+
+          <app-estate-card
+            [officeNumber]="'105'"
+            [area]="'474.00'"
+            [price]="'80,000'"
+            [totalPrice]="'37,920,000'"
+          >
+          </app-estate-card>
+        </div>
+      </mat-tab>
+
+      <mat-tab label="Second Floor">
+        <div class="flex flex-wrap justify-start py-12 overflow-hidden gap-x-0 sm:gap-x-4 gap-y-3">
+          <ng-container *ngFor="let data of corporateSecondFloorData; let i = index">
+            <app-estate-card
+              [officeNumber]="data?.number"
+              [area]="data?.area"
+              [price]="data?.price"
+              [totalPrice]="data?.total"
+            >
+            </app-estate-card>
+          </ng-container>
+
+        </div>
+      </mat-tab>
+      <mat-tab label="Third Floor">
+        <div class="flex flex-wrap justify-start py-12 overflow-hidden gap-x-0 sm:gap-x-4 gap-y-3">
+          <ng-container *ngFor="let data of corporateThirdFloorData; let i = index">
+            <app-estate-card
+              [officeNumber]="data?.number"
+              [area]="data?.area"
+              [price]="data?.price"
+              [totalPrice]="data?.total"
+            >
+            </app-estate-card>
+          </ng-container>
+
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+    <span id="apartments"></span>
   </section>
+
+  <section data-aos-duration="800" data-aos="fade-up" class="flex flex-col w-full py-10 border-b border-primary">
+    <h1 class="text-5xl font-semibold tracking-wider text-center text-primary">
+      Apartments
+    </h1>
+    <mat-tab-group class="mt-12" mat-stretch-tabs="true" mat-align-tabs="start">
+      <mat-tab label="Fourth Floor">
+        <div class="flex flex-wrap justify-start py-12 overflow-hidden gap-x-0 sm:gap-x-4 gap-y-3">
+          <ng-container *ngFor="let data of apartmentFourthFloorData; let i = index">
+            <app-estate-card
+              data-aos="flip-right"
+              data-aos-duration="500"
+              [apartmentNumber]="data?.number"
+              [area]="data?.area"
+              [price]="data?.price"
+              [totalPrice]="data?.total"
+            >
+            </app-estate-card>
+          </ng-container>
+
+        </div>
+      </mat-tab>
+      <mat-tab label="Fifth Floor">
+        <div class="flex flex-wrap justify-start py-12 overflow-hidden gap-x-0 sm:gap-x-4 gap-y-3">
+          <ng-container *ngFor="let data of apartmentFifthFloorData; let i = index">
+            <app-estate-card
+              [apartmentNumber]="data?.number"
+              [area]="data?.area"
+              [price]="data?.price"
+              [totalPrice]="data?.total"
+            >
+            </app-estate-card>
+          </ng-container>
+
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+    <span id="location"></span>
+  </section>
+
+  <section data-aos-duration="800" data-aos="fade-up" class="flex flex-col w-full py-10 border-b border-primary">
+    <h1 class="text-5xl font-semibold tracking-wider text-center text-primary">
+      Location
+    </h1>
+    <div #map class="w-full h-100 my-7"></div>
+  </section>
+
 </section>
+<app-footer></app-footer>
